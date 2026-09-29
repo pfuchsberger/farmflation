@@ -1,5 +1,7 @@
 /* FARMFLATION — landing page
-   Paleta tomada de la tapa del libro y del arte del árbol de dinero. */
+   Paleta tomada de la tapa del libro y del arte del árbol de dinero.
+   Tipografía: la misma que el libro. Garamond para el texto corrido,
+   Impact (mayúsculas, sin negrita) para todo lo que es "tapa". */
 
 :root {
   --red: #c8030a;
@@ -12,8 +14,8 @@
   --line: #e7ddce;
   --gray: #6b6459;
   --shadow: 0 20px 45px rgba(23, 19, 16, 0.15);
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --serif: "EB Garamond", Garamond, "Times New Roman", serif;
+  --display: Impact, "Anton", Haettenschweiler, "Arial Narrow Bold", sans-serif;
   --maxw: 1120px;
 }
 
@@ -23,11 +25,18 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: var(--sans);
+  font-family: var(--serif);
   color: var(--ink);
   background: var(--paper);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 img { max-width: 100%; display: block; }
@@ -45,16 +54,17 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 17px;
-  padding: 16px 30px;
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px 30px;
   border-radius: 4px;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.4px;
 }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary {
@@ -77,11 +87,11 @@ a { color: inherit; }
 
 .price-tag {
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 16px;
   color: var(--gray);
   margin-top: 10px;
 }
-.price-tag strong { color: var(--ink); font-size: 17px; }
+.price-tag strong { font-family: var(--display); color: var(--ink); font-size: 19px; letter-spacing: 0.3px; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -99,9 +109,10 @@ a { color: inherit; }
   height: 72px;
 }
 .logo {
-  font-family: var(--serif);
-  font-weight: 900;
-  font-size: 22px;
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 24px;
   letter-spacing: 0.5px;
   color: var(--ink);
   text-decoration: none;
@@ -119,8 +130,10 @@ nav.main-nav {
   gap: 28px;
 }
 nav.main-nav a.nav-link {
-  font-size: 14px;
-  font-weight: 600;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
   text-decoration: none;
   color: var(--ink);
   opacity: 0.8;
@@ -133,8 +146,9 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 .lang-switch {
   display: flex;
   gap: 6px;
-  font-size: 12px;
-  font-weight: 700;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 .lang-switch span {
@@ -194,27 +208,29 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   .hero-copy { padding-bottom: 56px; }
 }
 .eyebrow {
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 2.5px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
   margin: 0 0 18px;
 }
 .hero h1 {
-  font-family: var(--serif);
-  font-weight: 900;
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
   font-size: clamp(52px, 10vw, 92px);
   line-height: 0.95;
   margin: 0 0 18px;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 .hero-sub {
   font-family: var(--serif);
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-style: italic;
+  font-size: clamp(21px, 2.8vw, 28px);
   font-weight: 500;
-  max-width: 30ch;
+  max-width: 32ch;
   margin: 0 0 22px;
   color: rgba(255,255,255,0.96);
 }
@@ -228,18 +244,14 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   border-left: 3px solid rgba(255,255,255,0.5);
   padding-left: 16px;
 }
-.hero-tagline .strike {
-  text-decoration: line-through;
-  text-decoration-color: rgba(255,255,255,0.6);
-  text-decoration-thickness: 3px;
-}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 .hero-byline {
   margin-top: 30px;
-  font-size: 13px;
-  letter-spacing: 1.5px;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: rgba(255,255,255,0.75);
 }
 .hero-art {
@@ -262,19 +274,19 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 section { padding: 88px 0; }
 .section-tight { padding: 64px 0; }
 .section-label {
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--red-dark);
   margin: 0 0 14px;
 }
 h2.section-title {
-  font-family: var(--serif);
-  font-size: clamp(30px, 4.5vw, 44px);
-  line-height: 1.1;
+  font-size: clamp(30px, 4.5vw, 46px);
+  line-height: 1.08;
   margin: 0 0 28px;
-  max-width: 18ch;
+  max-width: 20ch;
 }
 .lede {
   font-family: var(--serif);
@@ -305,11 +317,11 @@ h2.section-title {
 .toxic-card .face {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 20px;
+  font-size: 21px;
   color: #ffb3b3;
   margin: 0 0 12px;
 }
-.toxic-card p { margin: 0; color: #d8d3cc; font-size: 15.5px; }
+.toxic-card p { margin: 0; color: #d8d3cc; font-size: 16.5px; }
 .toxic-quote {
   margin-top: 44px;
   font-family: var(--serif);
@@ -340,29 +352,31 @@ h2.section-title {
   position: relative;
 }
 .history-card .year {
-  font-family: var(--serif);
-  font-weight: 900;
-  font-size: 15px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 16px;
   color: var(--red-dark);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   margin: 0 0 6px;
 }
 .history-card h3 {
-  font-family: var(--serif);
-  font-size: 24px;
+  font-size: 25px;
   margin: 0 0 14px;
 }
 .history-card .recipe {
+  font-family: var(--serif);
   font-style: italic;
   color: var(--gray);
   margin: 0 0 14px;
-  font-size: 15px;
+  font-size: 16px;
 }
-.history-card p.body-text { font-size: 15.5px; margin: 0 0 14px; }
+.history-card p.body-text { font-size: 16.5px; margin: 0 0 14px; }
 .history-card .moraleja {
   font-family: var(--serif);
-  font-weight: 700;
-  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 17px;
   color: var(--ink);
   border-top: 1px dashed var(--line);
   padding-top: 14px;
@@ -371,7 +385,7 @@ h2.section-title {
 .history-footer {
   margin-top: 36px;
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 20px;
   font-style: italic;
   max-width: 60ch;
   color: var(--ink);
@@ -396,19 +410,52 @@ h2.section-title {
   border-radius: 10px;
 }
 .roadmap-num {
-  font-family: var(--serif);
-  font-weight: 900;
-  font-size: 34px;
+  font-family: var(--display);
+  font-size: 36px;
   color: var(--red);
   line-height: 1;
   flex-shrink: 0;
 }
 .roadmap-item h3 {
-  font-family: var(--serif);
-  font-size: 19px;
+  font-size: 20px;
   margin: 0 0 6px;
 }
-.roadmap-item p { margin: 0; font-size: 14.5px; color: var(--gray); }
+.roadmap-item p { margin: 0; font-family: var(--serif); font-size: 16px; color: var(--gray); }
+
+/* ---------- Señal y ruido (gráfico) ---------- */
+.signal { background: var(--paper-dim); }
+.signal-chart {
+  margin-top: 40px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 24px 8px;
+}
+.signal-chart svg { width: 100%; height: auto; display: block; }
+.signal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 22px;
+  font-family: var(--serif);
+  font-size: 15.5px;
+  color: var(--ink);
+}
+.signal-legend .legend-item { display: flex; align-items: center; gap: 10px; }
+.signal-legend .swatch { width: 30px; height: 0; border-top-width: 3px; border-top-style: solid; flex-shrink: 0; }
+.signal-legend .swatch.noise { border-color: var(--gray); border-top-style: dotted; border-top-width: 3px; }
+.signal-legend .swatch.nominal { border-color: var(--ink); }
+.signal-legend .swatch.real { border-color: var(--red); border-top-style: dashed; }
+.signal-caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  max-width: 60ch;
+  margin: 30px 0 0;
+  color: var(--ink);
+  border-left: 3px solid var(--red);
+  padding-left: 18px;
+}
 
 /* ---------- Adelanto / excerpt ---------- */
 .excerpt {
@@ -435,19 +482,29 @@ h2.section-title {
   line-height: 1;
 }
 .excerpt-box h3 {
-  font-family: var(--serif);
-  font-size: 22px;
+  font-size: 23px;
   margin: 0 0 16px;
   position: relative;
 }
-.excerpt-box p { font-size: 16.5px; margin: 0 0 14px; position: relative; }
+.excerpt-box p { font-family: var(--serif); font-size: 17px; margin: 0 0 14px; position: relative; }
 .excerpt-box p:last-of-type { margin-bottom: 0; }
 .excerpt-more {
   margin-top: 22px;
-  font-weight: 700;
+  font-family: var(--display);
+  text-transform: uppercase;
   font-size: 14px;
+  letter-spacing: 0.3px;
   color: var(--red-dark);
 }
+.excerpt-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 36px;
+}
+@media (min-width: 860px) {
+  .excerpt-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.excerpt-grid .excerpt-box { margin-top: 0; }
 
 /* ---------- Autor ---------- */
 .author { background: var(--ink); color: var(--paper); }
@@ -468,15 +525,15 @@ h2.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--serif);
-  font-weight: 900;
+  font-family: var(--display);
+  font-weight: 400;
   font-size: 90px;
   color: var(--cream);
   margin: 0 auto;
 }
 .author h2.section-title { color: #fff; }
 .author .section-label { color: #ff5a5f; }
-.author p { color: #d8d3cc; font-size: 16px; }
+.author p { color: #d8d3cc; font-size: 17px; }
 .author p strong { color: #fff; }
 
 /* ---------- CTA final ---------- */
@@ -513,7 +570,8 @@ footer.site-footer {
   background: var(--ink);
   color: rgba(255,255,255,0.6);
   padding: 40px 0;
-  font-size: 13px;
+  font-family: var(--serif);
+  font-size: 14px;
 }
 footer.site-footer .wrap {
   display: flex;
@@ -522,7 +580,13 @@ footer.site-footer .wrap {
   justify-content: space-between;
   align-items: center;
 }
-footer.site-footer strong { color: #fff; }
+footer.site-footer strong {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
 
 .visually-hidden {
   position: absolute;

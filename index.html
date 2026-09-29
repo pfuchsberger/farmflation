@@ -34,7 +34,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Anton&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
 <script type="application/ld+json">
@@ -88,7 +88,7 @@
         <p class="eyebrow">Finanzas personales · Pablo Fuchsberger</p>
         <h1>Farmflation<sup style="font-size:0.35em;">™</sup></h1>
         <p class="hero-sub">Cómo sembrar activos y protegernos de la inflación.</p>
-        <p class="hero-tagline">«La estrategia del juego no es ganar, es <span class="strike">no perder</span>».</p>
+        <p class="hero-tagline">«Su patrimonio es un campo sembrado sobre terreno inflacionario. Este libro es sobre qué plantar.»</p>
         <div class="hero-actions">
           <a href="#comprar" class="btn btn-on-red">Comprar en Amazon</a>
           <a href="#relacion" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6); color:#fff;">Leer el adelanto ↓</a>
@@ -105,8 +105,8 @@
   <section class="toxic" id="relacion">
     <div class="wrap">
       <p class="section-label">De qué se trata</p>
-      <h2 class="section-title">Usted tiene una relación con la inflación. No la eligió, y no puede terminarla.</h2>
-      <p class="lede" style="color:#d8d3cc;">No la firmó, no puede mudarse lejos de ella y no existe trámite que la disuelva. Conviven las veinticuatro horas del día, desde su primer ingreso hasta el último. Y, como toda relación de la que no se puede salir, tiene varias caras.</p>
+      <h2 class="section-title">Usted se encuentra en una relación tóxica con la inflación.</h2>
+      <p class="lede" style="color:#d8d3cc;">No la eligió, no la firmó, no puede mudarse lejos de ella y no existe trámite que la disuelva. Conviven las veinticuatro horas del día, desde su primer ingreso hasta el último. Y, como toda relación de la que no se puede salir, tiene varias caras.</p>
 
       <div class="toxic-grid">
         <div class="toxic-card">
@@ -195,11 +195,63 @@
     </div>
   </section>
 
+  <!-- SEÑAL Y RUIDO -->
+  <section class="signal">
+    <div class="wrap">
+      <p class="section-label">Capítulo 24 · Qué mirar y qué ignorar</p>
+      <h2 class="section-title">Señal y ruido</h2>
+      <p class="lede">El precio de una acción sube y baja todos los días: eso es ruido. Lo que importa es la tendencia de fondo, la señal — y esa señal solo cuenta si le gana a la inflación.</p>
+
+      <div class="signal-chart">
+        <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="signalTitle signalDesc">
+          <title id="signalTitle">Gráfico de señal y ruido</title>
+          <desc id="signalDesc">Una línea quebrada representa el ruido de la cotización diaria. Una línea de tendencia suave representa la señal, el crecimiento real del negocio. Una segunda línea de tendencia, más abajo, representa esa misma señal descontada por la inflación, con flechas que muestran cuánto le resta la inflación con el paso del tiempo.</desc>
+
+          <defs>
+            <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="3" refY="7" orient="auto">
+              <path d="M0,0 L6,0 L3,7 Z" fill="var(--red)"></path>
+            </marker>
+          </defs>
+
+          <!-- eje de tiempo -->
+          <line x1="70" y1="340" x2="850" y2="340" stroke="var(--line)" stroke-width="2"></line>
+          <text x="850" y="365" text-anchor="end" font-family="EB Garamond, Garamond, serif" font-style="italic" font-size="16" fill="var(--gray)">tiempo →</text>
+
+          <!-- ruido: la cotización real, día a día -->
+          <polyline points="70,300 100,280 130,315 160,265 190,290 220,240 250,270 280,225 310,250 340,205 370,235 400,190 430,215 460,175 490,205 520,160 550,190 580,145 610,175 640,130 670,160 700,115 730,145 760,105 790,130 820,90 850,70"
+            fill="none" stroke="var(--gray)" stroke-width="2" stroke-dasharray="1 5" stroke-linecap="round"></polyline>
+
+          <!-- señal: la tendencia real del negocio -->
+          <path d="M70,300 C300,255 550,160 850,70" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"></path>
+
+          <!-- señal descontada por la inflación -->
+          <path d="M70,300 C300,290 550,250 850,190" fill="none" stroke="var(--red)" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round"></path>
+
+          <!-- flechas: lo que la inflación le resta a la señal -->
+          <line x1="250" y1="262" x2="250" y2="284" stroke="var(--red)" stroke-width="2.5" marker-end="url(#arrowDown)"></line>
+          <line x1="450" y1="195" x2="450" y2="258" stroke="var(--red)" stroke-width="2.5" marker-end="url(#arrowDown)"></line>
+          <line x1="650" y1="127" x2="650" y2="222" stroke="var(--red)" stroke-width="2.5" marker-end="url(#arrowDown)"></line>
+          <line x1="820" y1="77" x2="820" y2="188" stroke="var(--red)" stroke-width="2.5" marker-end="url(#arrowDown)"></line>
+        </svg>
+      </div>
+
+      <div class="signal-legend">
+        <span class="legend-item"><span class="swatch noise"></span> Ruido — la cotización, día a día</span>
+        <span class="legend-item"><span class="swatch nominal"></span> Señal — el crecimiento real del negocio</span>
+        <span class="legend-item"><span class="swatch real"></span> Esa misma señal, descontada la inflación</span>
+      </div>
+
+      <p class="signal-caption">«La cotización (realidad) oscila alrededor de la tendencia de crecimiento del negocio; la inflación marca el piso que esa tendencia debe superar.»</p>
+    </div>
+  </section>
+
   <!-- ADELANTO -->
   <section class="excerpt" id="adelanto">
     <div class="wrap">
-      <p class="section-label">Un adelanto del libro</p>
-      <h2 class="section-title">Old Coppernose</h2>
+      <p class="section-label">Dos adelantos del libro</p>
+      <h2 class="section-title">Dos mil años de la misma jugada</h2>
+
+      <div class="excerpt-grid">
       <div class="excerpt-box">
         <h3>Capítulo 1 — La moneda</h3>
         <p>De todos estos episodios, uno de mis favoritos es el de Enrique VIII de Inglaterra, que pasó a la posteridad por la manera en que trató a sus esposas y quizá debería haberlo hecho también por la manera en que trató a su moneda.</p>
@@ -207,6 +259,15 @@
         <p>Los ingleses descubrieron el truco y bautizaron al rey <em>Old Coppernose</em>, «viejo nariz de cobre». El propio rostro del monarca se había convertido en la prueba de que la moneda estaba adulterada.</p>
         <p>Una idea antigua y, como verá en el resto del libro, muy vigente.</p>
         <p class="excerpt-more">Este es solo el capítulo 1 de 33. El libro completo sigue el hilo hasta hoy — con datos de septiembre de 2026.</p>
+      </div>
+
+      <div class="excerpt-box">
+        <h3>Estados Unidos hoy y una anécdota</h3>
+        <p>La anécdota es tan surrealista que parece inventada. A comienzos de 2001, Alan Greenspan, presidente de la Reserva Federal, explicaba ante el Senado que, tras varios años de superávit fiscal, las proyecciones oficiales contemplaban la posibilidad de que la deuda federal en manos del público prácticamente desapareciera en la década siguiente — y analizaba los problemas que eso traería.</p>
+        <p>La preocupación era genuina y técnicamente legítima, porque el bono del Tesoro es una pieza central de la infraestructura financiera mundial: la referencia de la tasa libre de riesgo, el refugio de la liquidez, el instrumento con el que se ejecuta la política monetaria. ¿Qué pasaría si dejara de existir?</p>
+        <p>Compare esa escena con la de hoy. El mismo país que en 2001 discutía qué hacer si se quedaba sin deuda debe hoy más de <strong>40 billones de dólares — cuarenta millones de millones</strong>. No hizo falta una revolución ni el fin del capitalismo: alcanzó con que los gobiernos siguieran haciendo, durante veinticinco años, lo que los políticos tienen incentivos para hacer.</p>
+        <p class="excerpt-more">Capítulo 3 — El déficit. Datos a septiembre de 2026.</p>
+      </div>
       </div>
     </div>
   </section>
