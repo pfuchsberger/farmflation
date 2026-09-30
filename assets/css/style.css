@@ -513,6 +513,19 @@ h2.section-title {
 .author .section-label { color: #ff5a5f; }
 .author p { color: #d8d3cc; font-size: 17px; }
 .author p strong { color: #fff; }
+.author-articles-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 3px;
+}
+.author-articles-link:hover { border-color: #fff; }
 
 /* ---------- CTA final ---------- */
 .final-cta {
@@ -572,3 +585,71 @@ footer.site-footer strong {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* ---------- Página de artículos ---------- */
+.page-header {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 64px 0 48px;
+}
+.page-header .section-label { color: #ff5a5f; }
+.page-header h1.section-title {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.05;
+  margin: 0 0 16px;
+  color: #fff;
+}
+.page-header p { color: #d8d3cc; font-size: 17px; max-width: 62ch; margin: 0; }
+
+.articles-list {
+  background: var(--paper);
+  padding: 56px 0 96px;
+}
+.article-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink);
+}
+.article-item:first-child { padding-top: 0; }
+.article-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 56px;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 13px;
+  color: var(--red-dark);
+  letter-spacing: 0.5px;
+}
+.article-body { flex: 1; min-width: 0; }
+.article-body h3 {
+  font-size: 20px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.article-body p {
+  font-family: var(--serif);
+  font-size: 15.5px;
+  color: var(--gray);
+  margin: 0;
+}
+.article-meta {
+  flex-shrink: 0;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--red-dark);
+  white-space: nowrap;
+}
+.article-item:hover .article-body h3 { text-decoration: underline; }
