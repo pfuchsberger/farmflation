@@ -191,7 +191,7 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   height: 100%;
   object-fit: cover;
   object-position: 58% 55%;
-  transform: scale(1.01);
+  transform: scale(1.005);
   z-index: 0;
 }
 .hero .wrap {
@@ -229,13 +229,14 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(21px, 2.8vw, 28px);
-  font-weight: 500;
+  font-weight: 700;
   max-width: 32ch;
   margin: 0 0 22px;
 }
 .hero-tagline {
   font-family: var(--serif);
   font-style: italic;
+  font-weight: 700;
   font-size: 19px;
   max-width: 34ch;
   margin: 0 0 34px;
