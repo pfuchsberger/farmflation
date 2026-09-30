@@ -185,21 +185,6 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.10), transparent 55%);
   z-index: 0;
 }
-.hero-bills {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 60px;
-  z-index: 0;
-  pointer-events: none;
-}
-.hero-bills .bill {
-  position: absolute;
-  bottom: -8px;
-  height: auto;
-  filter: drop-shadow(0 6px 6px rgba(0,0,0,0.25));
-}
 .hero .wrap {
   position: relative;
   z-index: 1;
@@ -267,14 +252,13 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   justify-content: center;
 }
 .hero-art img {
-  max-width: 240px;
-  width: 60%;
-  max-height: 46vh;
+  max-width: 288px;
+  width: 72%;
+  max-height: 52vh;
   object-fit: contain;
-  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
 }
 @media (min-width: 900px) {
-  .hero-art img { max-width: 340px; width: 100%; max-height: 62vh; }
+  .hero-art img { max-width: 408px; width: 100%; max-height: 68vh; }
 }
 
 /* ---------- Secciones generales ---------- */
