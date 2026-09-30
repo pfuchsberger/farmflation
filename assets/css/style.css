@@ -177,36 +177,41 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   color: var(--cream);
   overflow: hidden;
   isolation: isolate;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.10), transparent 55%);
-  z-index: 0;
-}
-.hero .wrap {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding-top: 56px;
-  padding-bottom: 40px;
+  min-height: 560px;
+  display: flex;
   align-items: center;
 }
 @media (min-width: 900px) {
-  .hero .wrap {
-    grid-template-columns: 1.25fr 0.75fr;
-    padding-top: 72px;
-    padding-bottom: 0;
-    align-items: end;
-  }
+  .hero { min-height: 82vh; }
 }
-.hero-copy { padding-bottom: 0; }
-@media (min-width: 900px) {
-  .hero-copy { padding-bottom: 56px; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% 28%;
+  transform: scale(1.45);
+  z-index: 0;
 }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10,6,5,0.6) 0%, transparent 20%, transparent 70%, rgba(10,6,5,0.65) 100%),
+    linear-gradient(105deg, rgba(15,10,9,0.75) 0%, rgba(120,4,9,0.48) 38%, rgba(200,3,10,0.1) 62%, transparent 78%),
+    radial-gradient(ellipse at 30% 15%, rgba(255,255,255,0.08), transparent 55%);
+  z-index: 1;
+}
+.hero .wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.hero-copy { max-width: 620px; }
 .eyebrow {
   font-family: var(--display);
   font-weight: 400;
@@ -253,21 +258,6 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   text-transform: uppercase;
   font-weight: 400;
   color: rgba(255,255,255,0.75);
-}
-.hero-art {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-.hero-art img {
-  max-width: 230px;
-  width: 60%;
-  max-height: 46vh;
-  object-fit: contain;
-  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
-}
-@media (min-width: 900px) {
-  .hero-art img { max-width: 300px; width: 100%; max-height: 62vh; }
 }
 
 /* ---------- Secciones generales ---------- */
