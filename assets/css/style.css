@@ -177,41 +177,35 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   color: var(--cream);
   overflow: hidden;
   isolation: isolate;
-  min-height: 560px;
-  display: flex;
-  align-items: center;
 }
-@media (min-width: 900px) {
-  .hero { min-height: 82vh; }
-}
-.hero-bg {
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 58% 52.5%;
-  transform: scale(1.0);
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.10), transparent 55%);
   z-index: 0;
 }
 .hero .wrap {
   position: relative;
-  z-index: 2;
-  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   padding-top: 56px;
-  padding-bottom: 56px;
+  padding-bottom: 40px;
+  align-items: center;
 }
-.hero-copy {
-  max-width: 620px;
-  background: rgba(12,9,8,0.72);
-  padding: 36px 40px;
-  border-radius: 10px;
+@media (min-width: 900px) {
+  .hero .wrap {
+    grid-template-columns: 1.2fr 0.8fr;
+    padding-top: 72px;
+    padding-bottom: 0;
+    align-items: end;
+  }
 }
-.hero .eyebrow,
-.hero h1,
-.hero-sub,
-.hero-tagline {
-  color: var(--cream);
+.hero-copy { padding-bottom: 0; }
+@media (min-width: 900px) {
+  .hero-copy { padding-bottom: 56px; }
 }
 .eyebrow {
   font-family: var(--display);
@@ -219,6 +213,7 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   font-size: 15px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
   margin: 0 0 18px;
 }
 .hero h1 {
@@ -237,6 +232,7 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   font-weight: 700;
   max-width: 32ch;
   margin: 0 0 22px;
+  color: rgba(255,255,255,0.96);
 }
 .hero-tagline {
   font-family: var(--serif);
@@ -245,13 +241,26 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   font-size: 19px;
   max-width: 34ch;
   margin: 0 0 34px;
-  border-left: 3px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.88);
+  border-left: 3px solid rgba(255,255,255,0.5);
   padding-left: 16px;
 }
-@media (max-width: 640px) {
-  .hero-copy { padding: 26px 24px; }
-}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.hero-art {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-art img {
+  max-width: 240px;
+  width: 60%;
+  max-height: 46vh;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
+}
+@media (min-width: 900px) {
+  .hero-art img { max-width: 340px; width: 100%; max-height: 62vh; }
+}
 
 /* ---------- Secciones generales ---------- */
 section { padding: 88px 0; }
