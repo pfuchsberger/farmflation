@@ -177,6 +177,7 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   color: var(--cream);
   overflow: hidden;
   isolation: isolate;
+  padding: 0;
 }
 .hero .wrap {
   position: relative;
@@ -184,21 +185,17 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  padding-top: 56px;
+  padding-top: 48px;
   padding-bottom: 40px;
   align-items: center;
 }
 @media (min-width: 900px) {
   .hero .wrap {
     grid-template-columns: 1.2fr 0.8fr;
-    padding-top: 72px;
-    padding-bottom: 0;
-    align-items: end;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    align-items: center;
   }
-}
-.hero-copy { padding-bottom: 0; }
-@media (min-width: 900px) {
-  .hero-copy { padding-bottom: 56px; }
 }
 .eyebrow {
   font-family: var(--display);
