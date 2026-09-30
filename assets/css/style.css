@@ -431,21 +431,20 @@ h2.section-title {
   border-radius: 12px;
   padding: 24px 24px 8px;
 }
-.signal-chart svg { width: 100%; height: auto; display: block; }
+.signal-chart svg.chart-main { width: 100%; height: auto; display: block; }
 .signal-legend {
   display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
-  margin-top: 22px;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 4px 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
   font-family: var(--serif);
-  font-size: 15.5px;
+  font-size: 17px;
   color: var(--ink);
 }
-.signal-legend .legend-item { display: flex; align-items: center; gap: 10px; }
-.signal-legend .swatch { width: 30px; height: 0; border-top-width: 3px; border-top-style: solid; flex-shrink: 0; }
-.signal-legend .swatch.noise { border-color: var(--gray); border-top-style: dotted; border-top-width: 3px; }
-.signal-legend .swatch.nominal { border-color: var(--ink); }
-.signal-legend .swatch.real { border-color: var(--red); border-top-style: dashed; }
+.signal-legend .legend-item { display: flex; align-items: center; gap: 14px; }
+.signal-legend .legend-icon { width: 40px; height: 10px; flex-shrink: 0; display: block; overflow: visible; }
 .signal-caption {
   font-family: var(--serif);
   font-style: italic;
@@ -521,14 +520,9 @@ h2.section-title {
   aspect-ratio: 1;
   max-width: 260px;
   border-radius: 50%;
-  background: var(--red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: 90px;
-  color: var(--cream);
+  border: 4px solid var(--red);
+  object-fit: cover;
+  display: block;
   margin: 0 auto;
 }
 .author h2.section-title { color: #fff; }
