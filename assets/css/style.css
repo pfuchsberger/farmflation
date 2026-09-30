@@ -533,7 +533,6 @@ h2.section-title {
   max-width: 280px;
   margin: 0 auto;
   border-radius: 6px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
   transform: rotate(-2deg);
 }
 .final-cta h2.section-title { color: #fff; max-width: none; }
