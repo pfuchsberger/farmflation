@@ -205,7 +205,7 @@
       <div class="signal-chart">
         <svg class="chart-main" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="signalTitle signalDesc">
           <title id="signalTitle">Gráfico de señal y ruido</title>
-          <desc id="signalDesc">Una línea punteada representa el ruido de la cotización diaria. Una línea negra, una especie de promedio móvil sobre esa cotización, representa la señal: el negocio nominal. Una línea roja, cada vez más abajo, representa ese mismo negocio en términos reales, descontada la inflación, con flechas que muestran cuánto le resta la inflación con el paso del tiempo.</desc>
+          <desc id="signalDesc">Una línea de puntos gruesos representa el ruido de la cotización diaria. Una línea negra lisa representa la señal: el negocio nominal. Una línea roja, cada vez más abajo, representa ese mismo negocio en términos reales, descontada la inflación, con flechas que muestran cuánto le resta la inflación con el paso del tiempo.</desc>
 
           <!-- eje de tiempo -->
           <line x1="70" y1="340" x2="850" y2="340" stroke="var(--line)" stroke-width="2"></line>
@@ -213,31 +213,30 @@
 
           <!-- cotización: el ruido diario -->
           <polyline points="70,300 100,280 130,315 160,265 190,290 220,240 250,270 280,225 310,250 340,205 370,235 400,190 430,215 460,175 490,205 520,160 550,190 580,145 610,175 640,130 670,160 700,115 730,145 760,105 790,130 820,90 850,70"
-            fill="none" stroke="var(--gray)" stroke-width="2" stroke-dasharray="1 5" stroke-linecap="round"></polyline>
+            fill="none" stroke="var(--gray)" stroke-width="5" stroke-dasharray="1 9" stroke-linecap="round"></polyline>
 
-          <!-- señal: promedio móvil sobre la cotización -- el negocio nominal -->
-          <polyline points="70,298 100,290 130,290 160,278 190,276 220,258 250,255 280,238 310,237 340,221 370,219 400,204 430,204 460,189 490,189 520,175 550,175 580,160 610,160 640,145 670,145 700,131 730,131 760,117 790,108 820,99 850,97"
-            fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <!-- señal: el negocio nominal -->
+          <path d="M70,300 C300,255 550,160 850,70" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"></path>
 
           <!-- el negocio real, descontada la inflación -->
           <path d="M70,300 C300,290 550,250 850,190" fill="none" stroke="var(--red)" stroke-width="4" stroke-linecap="round"></path>
 
           <!-- flechas: lo que la inflación le resta al negocio nominal -->
-          <line x1="250" y1="261" x2="250" y2="280" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
+          <line x1="250" y1="271" x2="250" y2="280" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
           <polygon points="245,280 255,280 250,290" fill="var(--red)"></polygon>
 
-          <line x1="450" y1="200" x2="450" y2="254" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
+          <line x1="450" y1="204" x2="450" y2="254" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
           <polygon points="445,254 455,254 450,264" fill="var(--red)"></polygon>
 
-          <line x1="650" y1="151" x2="650" y2="218" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
+          <line x1="650" y1="136" x2="650" y2="218" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
           <polygon points="645,218 655,218 650,228" fill="var(--red)"></polygon>
 
-          <line x1="820" y1="105" x2="820" y2="184" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
+          <line x1="820" y1="85" x2="820" y2="184" stroke="var(--red)" stroke-width="2" stroke-dasharray="3 3"></line>
           <polygon points="815,184 825,184 820,194" fill="var(--red)"></polygon>
         </svg>
 
         <div class="signal-legend">
-          <div class="legend-item"><svg class="legend-icon" viewBox="0 0 40 10"><line x1="0" y1="5" x2="40" y2="5" stroke="var(--gray)" stroke-width="2.5" stroke-dasharray="1 5" stroke-linecap="round"></line></svg> Cotización, el ruido diario.</div>
+          <div class="legend-item"><svg class="legend-icon" viewBox="0 0 40 10"><line x1="0" y1="5" x2="40" y2="5" stroke="var(--gray)" stroke-width="4.5" stroke-dasharray="1 8" stroke-linecap="round"></line></svg> Cotización, el ruido diario.</div>
           <div class="legend-item"><svg class="legend-icon" viewBox="0 0 40 10"><line x1="0" y1="5" x2="40" y2="5" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"></line></svg> La señal, el negocio nominal.</div>
           <div class="legend-item"><svg class="legend-icon" viewBox="0 0 40 10"><line x1="0" y1="5" x2="40" y2="5" stroke="var(--red)" stroke-width="3.5" stroke-linecap="round"></line></svg> El negocio real, descontado de la inflación.</div>
         </div>
