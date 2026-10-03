@@ -151,12 +151,21 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
   font-weight: 400;
   letter-spacing: 0.5px;
 }
-.lang-switch span {
+.lang-switch span,
+.lang-switch a {
   padding: 4px 8px;
   border-radius: 3px;
   color: var(--gray);
   border: 1px solid var(--line);
   cursor: default;
+  text-decoration: none;
+}
+.lang-switch a {
+  cursor: pointer;
+}
+.lang-switch a:hover {
+  border-color: var(--ink);
+  color: var(--ink);
 }
 .lang-switch span.active {
   background: var(--ink);
