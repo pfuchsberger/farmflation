@@ -162,19 +162,6 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 @media (min-width: 640px) {
   nav.main-nav a.nav-link { display: inline; }
 }
-nav.main-nav a.nav-link.nav-link-video {
-  display: none;
-  align-items: center;
-  gap: 6px;
-}
-@media (min-width: 640px) {
-  nav.main-nav a.nav-link.nav-link-video { display: inline-flex; }
-}
-nav.main-nav a.nav-link-video svg {
-  display: block;
-  width: 16px;
-  height: 16px;
-}
 .lang-switch {
   display: flex;
   gap: 6px;
