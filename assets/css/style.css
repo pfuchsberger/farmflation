@@ -603,6 +603,25 @@ footer.site-footer strong {
   letter-spacing: 0.3px;
   color: #fff;
 }
+footer.site-footer .footer-social {
+  justify-content: center;
+  gap: 18px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+footer.site-footer .social-icon {
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s ease;
+}
+footer.site-footer .social-icon:hover {
+  color: rgba(255,255,255,0.9);
+}
+footer.site-footer .social-icon svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
 
 .visually-hidden {
   position: absolute;
