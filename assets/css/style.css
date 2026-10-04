@@ -557,9 +557,14 @@ h2.section-title {
 .author .section-label { color: #ff5a5f; }
 .author p { color: #d8d3cc; font-size: 17px; }
 .author p strong { color: #fff; }
+.author-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 22px;
+}
 .author-articles-link {
   display: inline-block;
-  margin-top: 22px;
   font-family: var(--display);
   text-transform: uppercase;
   font-size: 15px;
