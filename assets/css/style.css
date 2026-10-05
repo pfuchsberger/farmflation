@@ -665,8 +665,21 @@ footer.site-footer strong {
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: var(--ink);
+  position: relative;
 }
 .article-item:first-child { padding-top: 0; }
+.article-item-stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.article-pub a {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  text-decoration: underline;
+}
+.article-pub a:hover { color: var(--red-dark); }
 .article-icon {
   flex-shrink: 0;
   width: 46px;
