@@ -266,6 +266,7 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 .hero h1 em {
   font-style: normal;
   color: var(--red);
+  display: block;
 }
 .hero-sub {
   font-family: var(--serif);
