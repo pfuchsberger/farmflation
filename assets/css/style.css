@@ -1,21 +1,22 @@
 /* FARMFLATION — landing page
-   Paleta tomada de la tapa del libro y del arte del árbol de dinero.
-   Tipografía: la misma que el libro. Garamond para el texto corrido,
-   Impact (mayúsculas, sin negrita) para todo lo que es "tapa". */
+   Paleta tomada de la tapa nueva del libro (KDP) y del arte del
+   árbol de dinero en rojo sobre fondo cremita. Tipografía: Space
+   Grotesk para el texto corrido, Archivo Narrow (bold) para todo
+   lo que es "tapa"/titulares. */
 
 :root {
-  --red: #c8030a;
-  --red-dark: #9c0208;
-  --red-darker: #7a0206;
-  --ink: #171310;
-  --paper: #faf8f4;
-  --paper-dim: #f0ece3;
-  --cream: #fffdf9;
-  --line: #e7ddce;
-  --gray: #6b6459;
-  --shadow: 0 20px 45px rgba(23, 19, 16, 0.15);
-  --serif: "EB Garamond", Garamond, "Times New Roman", serif;
-  --display: Impact, "Anton", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --red: #d42533;
+  --red-dark: #b31f2a;
+  --red-darker: #8f1821;
+  --ink: #000000;
+  --paper: #f0eee7;
+  --paper-dim: #e6e2d5;
+  --cream: #f0eee7;
+  --line: rgba(0, 0, 0, 0.14);
+  --gray: #57534a;
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  --serif: "Space Grotesk", -apple-system, "Segoe UI", sans-serif;
+  --display: "Archivo Narrow", "Arial Narrow", sans-serif;
   --maxw: 1120px;
 }
 
@@ -34,7 +35,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0;
 }
@@ -73,10 +74,10 @@ a { color: inherit; }
 }
 .btn-primary:hover { background: #000; box-shadow: var(--shadow); }
 .btn-on-red {
-  background: var(--cream);
-  color: var(--red-dark);
+  background: var(--red);
+  color: #fff;
 }
-.btn-on-red:hover { background: #fff; box-shadow: 0 15px 30px rgba(0,0,0,0.35); }
+.btn-on-red:hover { background: var(--red-dark); box-shadow: 0 15px 30px rgba(0,0,0,0.25); }
 .btn-outline {
   background: transparent;
   border-color: var(--ink);
@@ -98,7 +99,7 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 248, 244, 0.92);
+  background: rgba(240, 238, 231, 0.92);
   backdrop-filter: saturate(160%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -110,7 +111,7 @@ a { color: inherit; }
 }
 .logo {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 24px;
   letter-spacing: 0.5px;
@@ -220,8 +221,8 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: var(--red);
-  color: var(--cream);
+  background: var(--paper);
+  color: var(--ink);
   overflow: hidden;
   isolation: isolate;
   padding: 0;
@@ -246,40 +247,42 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 }
 .eyebrow {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: var(--ink);
   margin: 0 0 18px;
 }
 .hero h1 {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(52px, 10vw, 92px);
   line-height: 0.95;
   margin: 0 0 18px;
   letter-spacing: 0;
 }
+.hero h1 em {
+  font-style: normal;
+  color: var(--red);
+}
 .hero-sub {
   font-family: var(--serif);
-  font-style: italic;
   font-size: clamp(21px, 2.8vw, 28px);
-  font-weight: 700;
+  font-weight: 500;
   max-width: 32ch;
   margin: 0 0 22px;
-  color: rgba(255,255,255,0.96);
+  color: var(--ink);
 }
 .hero-tagline {
   font-family: var(--serif);
-  font-style: italic;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 19px;
   max-width: 34ch;
   margin: 0 0 34px;
-  color: rgba(255,255,255,0.88);
-  border-left: 3px solid rgba(255,255,255,0.5);
+  color: #2a2420;
+  border-left: 3px solid var(--red);
   padding-left: 16px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
@@ -343,10 +346,12 @@ h2.section-title {
   padding: 28px 26px;
 }
 .toxic-card .face {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 21px;
-  color: #ffb3b3;
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+  color: #ff5a5f;
   margin: 0 0 12px;
 }
 .toxic-card p { margin: 0; color: #d8d3cc; font-size: 16.5px; }
@@ -354,7 +359,7 @@ h2.section-title {
   margin-top: 44px;
   font-family: var(--serif);
   font-size: clamp(22px, 3vw, 30px);
-  font-style: italic;
+  font-weight: 500;
   line-height: 1.4;
   max-width: 46ch;
   color: #fff;
@@ -394,7 +399,7 @@ h2.section-title {
 }
 .history-card .recipe {
   font-family: var(--serif);
-  font-style: italic;
+  font-weight: 500;
   color: var(--gray);
   margin: 0 0 14px;
   font-size: 16px;
@@ -402,7 +407,6 @@ h2.section-title {
 .history-card p.body-text { font-size: 16.5px; margin: 0 0 14px; }
 .history-card .moraleja {
   font-family: var(--serif);
-  font-style: italic;
   font-weight: 600;
   font-size: 17px;
   color: var(--ink);
@@ -414,7 +418,7 @@ h2.section-title {
   margin-top: 36px;
   font-family: var(--serif);
   font-size: 20px;
-  font-style: italic;
+  font-weight: 500;
   max-width: 60ch;
   color: var(--ink);
 }
@@ -475,7 +479,7 @@ h2.section-title {
 .signal-legend .legend-icon { width: 40px; height: 10px; flex-shrink: 0; display: block; overflow: visible; }
 .signal-caption {
   font-family: var(--serif);
-  font-style: italic;
+  font-weight: 500;
   font-size: 18px;
   max-width: 60ch;
   margin: 30px 0 0;
@@ -578,8 +582,8 @@ h2.section-title {
 
 /* ---------- CTA final ---------- */
 .final-cta {
-  background: var(--red);
-  color: var(--cream);
+  background: var(--paper-dim);
+  color: var(--ink);
   position: relative;
   overflow: hidden;
 }
@@ -595,14 +599,14 @@ h2.section-title {
   max-width: 280px;
   margin: 0 auto;
   border-radius: 6px;
-  box-shadow: 0 18px 34px rgba(0,0,0,0.35);
+  box-shadow: 0 18px 34px rgba(0,0,0,0.2);
   transform: rotate(-2deg);
 }
-.final-cta h2.section-title { color: #fff; max-width: none; }
-.final-cta .section-label { color: rgba(255,255,255,0.85); }
-.final-cta p.lede { color: rgba(255,255,255,0.95); }
-.final-cta .price-tag { color: rgba(255,255,255,0.85); }
-.final-cta .price-tag strong { color: #fff; }
+.final-cta h2.section-title { color: var(--ink); max-width: none; }
+.final-cta .section-label { color: var(--red-dark); }
+.final-cta p.lede { color: #2a2420; }
+.final-cta .price-tag { color: var(--gray); }
+.final-cta .price-tag strong { color: var(--ink); }
 .final-cta .hero-actions { margin-top: 26px; }
 
 /* ---------- Footer ---------- */
@@ -623,7 +627,7 @@ footer.site-footer .wrap {
 footer.site-footer strong {
   font-family: var(--display);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.3px;
   color: #fff;
 }
@@ -644,7 +648,7 @@ footer.site-footer strong {
 .page-header .section-label { color: #ff5a5f; }
 .page-header h1.section-title {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(32px, 5vw, 50px);
   line-height: 1.05;
