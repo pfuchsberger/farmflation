@@ -17,7 +17,6 @@
   --shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
   --serif: "Space Grotesk", -apple-system, "Segoe UI", sans-serif;
   --display: "Archivo Narrow", "Arial Narrow", sans-serif;
-  --display-black: "Archivo", "Arial Black", sans-serif;
   --maxw: 1120px;
 }
 
@@ -111,20 +110,13 @@ a { color: inherit; }
   height: 72px;
 }
 .logo {
-  font-family: var(--display-black);
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 24px;
-  letter-spacing: 0.5px;
-  color: var(--ink);
-  text-decoration: none;
   display: flex;
-  align-items: baseline;
-  gap: 3px;
+  align-items: center;
 }
-.logo em {
-  font-style: normal;
-  color: var(--red);
+.logo img {
+  display: block;
+  height: 24px;
+  width: auto;
 }
 .brand {
   display: flex;
