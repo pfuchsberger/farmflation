@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic — farmflation - Pablo Fuchsberger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ready-to-use AI prompts by Pablo Fuchsberger for analyzing stocks and building a portfolio, plus articles on using AI for investing.">
+<meta name="author" content="Pablo Fuchsberger">
+<link rel="canonical" href="https://farmflation.com/dynamic.html">
+<link rel="alternate" hreflang="en" href="https://farmflation.com/dynamic.html">
+<link rel="alternate" hreflang="es" href="https://farmflation.com/es/dinamico.html">
+<link rel="alternate" hreflang="x-default" href="https://farmflation.com/dynamic.html">
+<meta name="robots" content="noindex">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#d42533">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=32">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <a href="index.html" class="logo"><img src="assets/img/farmflation-wordmark-inline.png" alt="Farmflation™" width="1200" height="169"></a>
+      <a href="https://www.instagram.com/farmflation" target="_blank" rel="noopener" aria-label="Instagram" class="brand-social">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="42" height="42" rx="12" fill="none" stroke="currentColor" stroke-width="3"></rect><circle cx="24" cy="24" r="11" fill="none" stroke="currentColor" stroke-width="3"></circle><circle cx="36" cy="12" r="2.5" fill="currentColor"></circle></svg>
+      </a>
+      <a href="https://www.youtube.com/@farmflation/shorts" target="_blank" rel="noopener" aria-label="YouTube" class="brand-social">
+        <svg viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><rect x="1.5" y="1.5" width="45" height="31" rx="8" fill="none" stroke="currentColor" stroke-width="3"></rect><polygon points="19,10 19,24 32,17" fill="currentColor"></polygon></svg>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a class="nav-link" href="index.html#relacion">The book</a>
+      <a class="nav-link" href="index.html#adelanto">Preview</a>
+      <a class="nav-link" href="index.html#autor">About</a>
+      <a class="nav-link" href="https://www.youtube.com/@farmflation/shorts" target="_blank" rel="noopener">Shorts</a>
+      <a class="nav-link" href="dynamic.html">Dynamic</a>
+      <a class="nav-link" href="articles.html">Articles</a>
+      <div class="lang-switch" aria-label="Language">
+        <span class="active"><span class="flag-icon flag-gb"></span>EN</span>
+        <a href="es/dinamico.html"><span class="flag-icon flag-es"></span>ES</a>
+      </div>
+      <a class="btn btn-outline header-cta" style="padding:10px 18px;font-size:14px;" href="index.html#comprar">Buy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="wrap">
+      <p class="section-label">Pablo Fuchsberger</p>
+      <h1 class="section-title">Dynamic</h1>
+      <p>Ready-to-use AI prompts to analyze stocks and build a portfolio. Copy, paste, and run them with your assistant of choice.</p>
+    </div>
+  </section>
+
+  <section class="prompts-list">
+    <div class="wrap">
+
+      <article class="prompt-card">
+        <div class="prompt-card-head">
+          <p class="prompt-label">Prompt 1</p>
+          <button class="copy-btn" type="button">Copy prompt</button>
+        </div>
+        <h3>Ten compounders and ten momentum stocks from superinvestors</h3>
+        <div class="prompt-text">
+          <p>Act as a long-term investment analyst. Use your internet access and work only with data you can verify: cite the source and date for each data point, and if you can't find one, write "no data" instead of estimating it.</p>
+          <ol>
+            <li>Go to Dataroma (<a href="https://www.dataroma.com" target="_blank" rel="noopener">www.dataroma.com</a>) and review superinvestors' disclosed portfolios. Build a universe of the 40 stocks held by the most superinvestors and the ones most bought in the latest reported quarter.</li>
+            <li>For each stock, get: sector, market capitalization, trailing twelve-month P/E, forward P/E based on next year's estimated earnings, expected EPS growth for the next two years per analyst consensus, operating margin, free cash flow, net debt to EBITDA, and the stock's twelve-month return excluding the most recent month.</li>
+            <li>Classify each one as a <strong>compounder</strong> (established business, at least ten years of growing profits, high return on capital, moderate debt, and pricing power) or as <strong>momentum</strong> (profitable company with earnings growing more than 20% annually and a twelve-month return clearly above the S&amp;P 500's).</li>
+            <li>Within each group, rank the stocks from lowest to highest by forward P/E divided by expected EPS growth (PEG ratio) and pick the top ten.</li>
+            <li>Present two tables, one of ten compounders and one of ten momentum stocks, with all the columns above plus the number of superinvestors holding each stock and the names of the three most relevant ones. Below each table, note each company's main risk in one line.</li>
+            <li>End with the date of the most recent 13F filing you used and the list of data points you couldn't verify.</li>
+          </ol>
+          <p>This isn't a buy recommendation: I need a list of candidates to study.</p>
+        </div>
+        <textarea class="prompt-raw" hidden>Act as a long-term investment analyst. Use your internet access and work only with data you can verify: cite the source and date for each data point, and if you can't find one, write "no data" instead of estimating it.
+1. Go to Dataroma (www.dataroma.com) and review superinvestors' disclosed portfolios. Build a universe of the 40 stocks held by the most superinvestors and the ones most bought in the latest reported quarter.
+2. For each stock, get: sector, market capitalization, trailing twelve-month P/E, forward P/E based on next year's estimated earnings, expected EPS growth for the next two years per analyst consensus, operating margin, free cash flow, net debt to EBITDA, and the stock's twelve-month return excluding the most recent month.
+3. Classify each one as a compounder (established business, at least ten years of growing profits, high return on capital, moderate debt, and pricing power) or as momentum (profitable company with earnings growing more than 20% annually and a twelve-month return clearly above the S&P 500's).
+4. Within each group, rank the stocks from lowest to highest by forward P/E divided by expected EPS growth (PEG ratio) and pick the top ten.
+5. Present two tables, one of ten compounders and one of ten momentum stocks, with all the columns above plus the number of superinvestors holding each stock and the names of the three most relevant ones. Below each table, note each company's main risk in one line.
+6. End with the date of the most recent 13F filing you used and the list of data points you couldn't verify.
+This isn't a buy recommendation: I need a list of candidates to study.</textarea>
+      </article>
+
+      <article class="prompt-card">
+        <div class="prompt-card-head">
+          <p class="prompt-label">Prompt 2</p>
+          <button class="copy-btn" type="button">Copy prompt</button>
+        </div>
+        <h3>Your gem vs. its sector</h3>
+        <div class="prompt-text">
+          <p>Act as an independent sector analyst. I'm studying [NAME, TICKER] as a possible long-term investment. Use your internet access, cite the source and date for each data point, and don't estimate what you can't find.</p>
+          <ol>
+            <li>Identify its five most comparable publicly traded competitors (same core business and similar size) and explain in one line why you chose each one.</li>
+            <li>Build a comparison table of all six companies with: annual sales and EPS growth over the last five years, expected EPS growth for the next two, current and forward P/E, five-year average P/E, gross and operating margin, return on invested capital (ROIC), free cash flow over sales, net debt to EBITDA, change in shares outstanding over five years, and dividend yield.</li>
+            <li>Assess, for each one, its pricing power and economic moat: could it raise prices during the high-inflation years without losing volume? What protects it from competition?</li>
+            <li>Prepare a table of [NAME]'s advantages and disadvantages versus its sector, with at least five points in each column.</li>
+            <li>List the three risks that could break the investment thesis and which indicator would signal them early.</li>
+          </ol>
+        </div>
+        <textarea class="prompt-raw" hidden>Act as an independent sector analyst. I'm studying [NAME, TICKER] as a possible long-term investment. Use your internet access, cite the source and date for each data point, and don't estimate what you can't find.
+1. Identify its five most comparable publicly traded competitors (same core business and similar size) and explain in one line why you chose each one.
+2. Build a comparison table of all six companies with: annual sales and EPS growth over the last five years, expected EPS growth for the next two, current and forward P/E, five-year average P/E, gross and operating margin, return on invested capital (ROIC), free cash flow over sales, net debt to EBITDA, change in shares outstanding over five years, and dividend yield.
+3. Assess, for each one, its pricing power and economic moat: could it raise prices during the high-inflation years without losing volume? What protects it from competition?
+4. Prepare a table of [NAME]'s advantages and disadvantages versus its sector, with at least five points in each column.
+5. List the three risks that could break the investment thesis and which indicator would signal them early.</textarea>
+      </article>
+
+      <article class="prompt-card">
+        <div class="prompt-card-head">
+          <p class="prompt-label">Prompt 3</p>
+          <button class="copy-btn" type="button">Copy prompt</button>
+        </div>
+        <h3>The quarterly review</h3>
+        <div class="prompt-text">
+          <p>Act as an analyst who follows [NAME, TICKER] for a long-term investor. Use your internet access and cite the source and date for each data point. Summarize the latest reported quarter's results against what the consensus expected and against the same quarter a year earlier: sales, operating margin, EPS, free cash flow, debt, and share buybacks. Note whether the company's or analysts' projections changed, and whether there were signs of weakening pricing power or competitive advantage. End with a one-line verdict: is the investment thesis still intact, weakened, or broken? Explain why.</p>
+        </div>
+        <textarea class="prompt-raw" hidden>Act as an analyst who follows [NAME, TICKER] for a long-term investor. Use your internet access and cite the source and date for each data point. Summarize the latest reported quarter's results against what the consensus expected and against the same quarter a year earlier: sales, operating margin, EPS, free cash flow, debt, and share buybacks. Note whether the company's or analysts' projections changed, and whether there were signs of weakening pricing power or competitive advantage. End with a one-line verdict: is the investment thesis still intact, weakened, or broken? Explain why.</textarea>
+      </article>
+
+      <p class="prompts-note">Want more on using AI for investing? Also read <a href="assets/pdf/ES/ai_intro.pdf" target="_blank" rel="noopener">La revolución informática, una introducción a la Inteligencia artificial</a> <em>(in Spanish)</em>.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span><strong>Farmflation™</strong> · © 2026 Pablo Fuchsberger. All rights reserved.</span>
+    <span><a href="es/dinamico.html" style="color:inherit;">También en español →</a></span>
+  </div>
+</footer>
+
+<script>
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  var ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+document.querySelectorAll('.copy-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card = btn.closest('.prompt-card');
+    var text = card.querySelector('.prompt-raw').value;
+    var original = btn.textContent;
+    function showCopied() {
+      btn.textContent = 'Copied ✓';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1800);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(showCopied, function () {
+        if (fallbackCopy(text)) showCopied();
+      });
+    } else if (fallbackCopy(text)) {
+      showCopied();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

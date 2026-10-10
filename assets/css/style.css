@@ -720,3 +720,68 @@ footer.site-footer strong {
   white-space: nowrap;
 }
 .article-item:hover .article-body h3 { text-decoration: underline; }
+
+/* ---------- Página de prompts (Dinámico / Dynamic) ---------- */
+.prompts-list {
+  background: var(--paper);
+  padding: 56px 0 96px;
+}
+.prompt-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px;
+}
+.prompt-card + .prompt-card { margin-top: 24px; }
+.prompt-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.prompt-label {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--red-dark);
+  margin: 0;
+}
+.prompt-card h3 {
+  font-size: 23px;
+  margin: 0 0 18px;
+}
+.prompt-text {
+  font-family: var(--serif);
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.prompt-text p { margin: 0 0 14px; }
+.prompt-text ol { margin: 0 0 14px; padding-left: 22px; }
+.prompt-text li { margin-bottom: 10px; }
+.prompt-text a { color: var(--red-dark); }
+.copy-btn {
+  flex-shrink: 0;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.copy-btn:hover { background: #000; }
+.copy-btn.copied { background: var(--red); }
+.prompts-note {
+  margin-top: 36px;
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--gray);
+}
+.prompts-note a { color: var(--red-dark); }
