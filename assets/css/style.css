@@ -785,3 +785,24 @@ footer.site-footer strong {
   color: var(--gray);
 }
 .prompts-note a { color: var(--red-dark); }
+.prompt-example {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  font-family: var(--serif);
+  font-size: 15.5px;
+}
+.prompt-example-label {
+  display: block;
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+.prompt-example a {
+  color: var(--red-dark);
+  font-weight: 600;
+  text-decoration: underline;
+}
