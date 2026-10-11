@@ -155,11 +155,23 @@ nav.main-nav a.nav-link {
   text-decoration: none;
   color: var(--ink);
   opacity: 0.8;
-  display: none;
+  display: inline;
 }
 nav.main-nav a.nav-link:hover { opacity: 1; }
-@media (min-width: 640px) {
-  nav.main-nav a.nav-link { display: inline; }
+@media (max-width: 639px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 14px 0;
+    row-gap: 10px;
+  }
+  nav.main-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+  nav.main-nav a.nav-link { font-size: 13px; }
 }
 .lang-switch {
   display: flex;
