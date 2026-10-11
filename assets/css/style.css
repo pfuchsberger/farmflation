@@ -589,12 +589,39 @@ h2.section-title {
 @media (min-width: 860px) {
   .final-cta .wrap { grid-template-columns: 0.8fr 1.2fr; }
 }
-.book-cover-shot {
+.book-3d {
+  width: 100%;
   max-width: 280px;
   margin: 0 auto;
-  border-radius: 6px;
-  box-shadow: 0 18px 34px rgba(0,0,0,0.2);
-  transform: rotate(-2deg);
+  padding: 20px 0 20px 30px;
+  perspective: 1400px;
+}
+.book-3d-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 900 / 1357;
+  transform-style: preserve-3d;
+  transform: rotateY(-22deg);
+  filter: drop-shadow(16px 26px 26px rgba(0,0,0,0.3));
+}
+.book-3d-face {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.book-3d-cover {
+  left: 0;
+  width: 100%;
+  transform: translateZ(11.5px);
+  border-radius: 1px 3px 3px 1px;
+}
+.book-3d-spine {
+  left: -23px;
+  width: 23px;
+  transform-origin: right center;
+  transform: rotateY(-90deg);
 }
 .final-cta h2.section-title { color: var(--ink); max-width: none; }
 .final-cta .section-label { color: var(--red-dark); }
