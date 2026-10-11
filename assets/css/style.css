@@ -595,6 +595,7 @@ h2.section-title {
   margin: 0 auto;
   padding: 20px 0 20px 30px;
   perspective: 1400px;
+  filter: drop-shadow(16px 26px 26px rgba(0,0,0,0.3));
 }
 .book-3d-inner {
   position: relative;
@@ -602,7 +603,6 @@ h2.section-title {
   aspect-ratio: 900 / 1357;
   transform-style: preserve-3d;
   transform: rotateY(-22deg);
-  filter: drop-shadow(16px 26px 26px rgba(0,0,0,0.3));
 }
 .book-3d-face {
   position: absolute;
