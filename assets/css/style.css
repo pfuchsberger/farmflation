@@ -221,12 +221,6 @@ nav.main-nav a.nav-link:hover { opacity: 1; }
 .flag-es {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 36'%3E%3Crect width='60' height='36' fill='%23AA151B'/%3E%3Crect y='9' width='60' height='18' fill='%23F1BF00'/%3E%3C/svg%3E");
 }
-.header-cta {
-  display: none;
-}
-@media (min-width: 720px) {
-  .header-cta { display: inline-flex; }
-}
 
 /* ---------- Hero ---------- */
 .hero {
