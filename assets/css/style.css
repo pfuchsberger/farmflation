@@ -825,3 +825,35 @@ footer.site-footer strong {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* ---------- Aviso legal ---------- */
+.roadmap-legal {
+  margin: 28px 0 0;
+  text-align: center;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.roadmap-legal a { color: var(--gray); text-decoration: underline; text-underline-offset: 4px; }
+.roadmap-legal a:hover { color: var(--red-dark); }
+
+.legal-body { background: var(--paper); padding: 56px 0 96px; }
+.legal-body .wrap > * { max-width: 72ch; }
+.legal-body h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin: 40px 0 12px;
+  color: var(--ink);
+}
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink); margin: 0 0 14px; }
+.legal-body p.legal-final {
+  margin-top: 8px;
+  padding: 20px 24px;
+  background: var(--cream);
+  border-left: 4px solid var(--red);
+  border-radius: 6px;
+}
+.legal-body p.legal-rights { margin-top: 36px; font-size: 14px; color: var(--gray); }
